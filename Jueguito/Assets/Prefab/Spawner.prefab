@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 10
   vidaActual: 10
+  xp: {fileID: 4503966077729156436, guid: e7865b52267739446ac91c40f803ab15, type: 3}
 --- !u!61 &5740627012628183517
 BoxCollider2D:
   m_ObjectHideFlags: 0

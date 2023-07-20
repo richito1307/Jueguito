@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class player_aim : MonoBehaviour
 {
-    [SerializeField] FixedJoystick joystick;
-
+    [SerializeField] VariableJoystick joystick;
+    private void Start()
+    {
+        joystick.gameObject.SetActive(true);
+    }
     private void FixedUpdate()
     {
         if (joystick.Direction == Vector2.zero) return;
