@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Player_health : MonoBehaviour
 {
     [SerializeField] public float vidaMaxima = 10f;
     [SerializeField] public float vidaActual;
-    [SerializeField] private GameObject xp;
 
     private void Start()
     {
@@ -20,8 +19,6 @@ public class Health : MonoBehaviour
         if (vidaActual <= 0)
         {
             vidaActual = 0;
-            Vector3 actualPosition = transform.position;
-            GameObject xpFall = Instantiate(xp, actualPosition, Quaternion.identity);
             Destroy(gameObject);
         }
         else if (vidaActual > vidaMaxima)
@@ -41,4 +38,3 @@ public class Health : MonoBehaviour
         }
     }
 }
-

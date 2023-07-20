@@ -6,7 +6,7 @@ public class player_shooting : MonoBehaviour
 {
     [SerializeField] private GameObject proyectil;
     [SerializeField] private Transform puntoDeDisparo;
-    [SerializeField] FixedJoystick joystick;
+    [SerializeField] VariableJoystick joystick;
     [SerializeField] public float tiempoActual = 0f;
     [SerializeField] public float tiempoMaximo = 1f;
 
