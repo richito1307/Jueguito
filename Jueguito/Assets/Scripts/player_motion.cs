@@ -14,13 +14,9 @@ public class player_motion : MonoBehaviour
     private bool isDashing = false;
     private float dashTimer = 0f;
     private float cooldownTimer = 0f;
-    [SerializeField] private Animator animator;
-    private Vector2 movimiento;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
         button.onClick.AddListener(StartDash);
     }
 
@@ -61,12 +57,10 @@ public class player_motion : MonoBehaviour
     private void PerformNormalMovement()
     {
         // Movimiento normal
-        float movimientoHorizontal = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
-        float movimientoVertical = Input.GetAxisRaw("Vertical") + joystick.Vertical;
-        animator.SetFloat("MovimientoX", movimientoHorizontal);
-        animator.SetFloat("MovimientoY", movimientoVertical);
+        float movimientoHorizontal = Input.GetAxis("Horizontal") + joystick.Horizontal;
+        float movimientoVertical = Input.GetAxis("Vertical") + joystick.Vertical;
 
-        movimiento = new Vector2(movimientoHorizontal, movimientoVertical).normalized;
+        Vector2 movimiento = new Vector2(movimientoHorizontal, movimientoVertical).normalized;
         rb2D.velocity = movimiento * motionSpeed;
     }
 
