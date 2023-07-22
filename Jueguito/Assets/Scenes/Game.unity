@@ -1819,6 +1819,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 5452798318640970029}
+    - target: {fileID: 2949143105664123579, guid: e822f43d5cef46c4fa9ae365e66cf277, type: 3}
+      propertyPath: tiempoMaximo
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949143105664123579, guid: e822f43d5cef46c4fa9ae365e66cf277, type: 3}
+      propertyPath: disparosAntesRecarga
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2949143105664123581, guid: e822f43d5cef46c4fa9ae365e66cf277, type: 3}
       propertyPath: button
       value: 
